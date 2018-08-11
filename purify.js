@@ -1,9 +1,9 @@
 const purify = require("purify-css");
-const content = ["**/src/js/*.jsx", "**/src/html/*.js"];
+const content = ["**/src/**/*.jsx"];
 const css = ["./src/components/App.css"];
 
 const options = {
-  output: "./src/app.min.css",
+  output: "./src/components/App.css",
 
   // Will minify CSS code in addition to purify.
   minify: false,
