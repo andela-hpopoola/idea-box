@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import todos from "./../db/todos";
+import $ from "jquery";
+import Popper from "popper.js";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import TodoList from "./todo/TodoList";
 import TodoForm from "./todo/TodoForm";
 import Alert from "./common/Alert";
 import Button from "./common/Button";
+import Nav from "./common/Nav";
 import "./App.css";
 
 class App extends Component {
@@ -62,6 +66,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Alert message={this.state.error} />
         <TodoList
           toggleCompletedTodo={this.toggleCompletedTodo}
