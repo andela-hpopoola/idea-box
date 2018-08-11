@@ -7,7 +7,7 @@ import TodoList from "./todo/TodoList";
 import TodoForm from "./todo/TodoForm";
 import Alert from "./common/Alert";
 import Button from "./common/Button";
-import Nav from "./common/Nav";
+import Header from "./common/Header";
 import "./App.css";
 
 class App extends Component {
@@ -66,7 +66,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Header />
         <Alert message={this.state.error} />
         <TodoList
           toggleCompletedTodo={this.toggleCompletedTodo}
