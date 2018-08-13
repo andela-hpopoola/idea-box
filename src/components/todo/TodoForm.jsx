@@ -27,7 +27,9 @@ class TodoForm extends Component {
           value={this.state.todo}
           placeholder="...todo"
         />
-        <button onClick={this.handleSubmit}>Add Todo</button>
+        <button className="btn btn-primary" onClick={this.handleSubmit}>
+          Add Todo
+        </button>
       </form>
     );
   }
