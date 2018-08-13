@@ -7,8 +7,9 @@ import TodoList from "./todo/TodoList";
 import TodoForm from "./todo/TodoForm";
 import Alert from "./common/Alert";
 import Button from "./common/Button";
-import Nav from "./common/Nav";
+import Header from "./common/Header";
 import "./App.css";
+import AppContainer from "./common/Container";
 
 class App extends Component {
   constructor(props) {
@@ -66,17 +67,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Header />
         <Alert message={this.state.error} />
-        <TodoList
-          toggleCompletedTodo={this.toggleCompletedTodo}
-          deleteTodo={this.handleDeleteTodo}
-          todos={this.state.todos}
-        />
-        <TodoForm value={this.state.todo} submitTodo={this.addTodo} />
-        {!!this.state.completed && (
-          <Button name="Clear Completed" onClick={this.clearCompletedTodos} />
-        )}
+        <AppContainer>
+          <TodoList
+            toggleCompletedTodo={this.toggleCompletedTodo}
+            deleteTodo={this.handleDeleteTodo}
+            todos={this.state.todos}
+          />
+          <TodoForm value={this.state.todo} submitTodo={this.addTodo} />
+          {!!this.state.completed && (
+            <Button name="Clear Completed" onClick={this.clearCompletedTodos} />
+          )}
+        </AppContainer>
       </div>
     );
   }
