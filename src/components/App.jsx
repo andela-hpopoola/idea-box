@@ -4,6 +4,7 @@ import TodoList from "./todo/TodoList";
 import TodoForm from "./todo/TodoForm";
 import Alert from "./common/Alert";
 import Button from "./common/Button";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
