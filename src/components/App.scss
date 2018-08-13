@@ -3,6 +3,7 @@
 @import "../config/scss/pretty-checkbox.variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/pretty-checkbox/src/pretty-checkbox.scss";
+
 .navbar {
   .navbar-brand {
     font-family: $font-family-sans-serif;
@@ -19,6 +20,7 @@
     color: $white;
   }
 }
+
 .header {
   h1 {
     color: $primary;

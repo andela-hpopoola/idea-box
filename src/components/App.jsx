@@ -78,7 +78,6 @@ class App extends Component {
             todos={this.state.todos}
           />
           <TodoForm value={this.state.todo} submitTodo={this.addTodo} />
-
           {!!this.state.completed && (
             <Button
               name="Clear Completed"
