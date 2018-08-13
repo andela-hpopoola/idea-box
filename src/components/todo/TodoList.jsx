@@ -4,7 +4,7 @@ import Todo from "./Todo";
 
 const TodoList = props => {
   return (
-    <div>
+    <div className="item-list">
       {props.todos.map(todo => (
         <Todo
           deleteTodo={props.deleteTodo}

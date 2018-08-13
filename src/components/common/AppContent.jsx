@@ -1,8 +1,8 @@
 import React from "react";
 
-const AppContainer = props => {
+const AppContent = props => {
   return (
-    <div className="app-container d-flex justify-content-center align-items-center">
+    <div className="app-content d-flex justify-content-center align-items-center">
       <div className="card">
         <div className="card-body">{props.children}</div>
       </div>
@@ -10,4 +10,4 @@ const AppContainer = props => {
   );
 };
 
-export default AppContainer;
+export default AppContent;
