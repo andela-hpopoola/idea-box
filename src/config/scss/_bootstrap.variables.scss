@@ -1,0 +1,45 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$body-bg: $gray-200;
+$body-color: $gray-600;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Lato", sans-serif, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family: "Fjalla One", sans-serif;
+$headings-font-weight: 400;
+
+// Navbar
+$navbar-padding-y: 15px;
+
+// Cards
+$card-spacer-x: 2rem 3rem;
+$card-border-width: 0;
+$card-border-radius: 0 0 3px 3px;
+$card-border-color: transparent;
+$card-inner-border-radius: 0;
+$card-cap-bg: $red;
+
+// Forms
+$input-bg: $gray-100;
+$input-color: $gray-600;
+$input-border-color: $gray-300;
+$input-border-radius-sm: 2px;
+$input-focus-bg: $white;
+$input-focus-border-color: $gray-600;
+$input-focus-color: $gray-600;
+$input-focus-box-shadow: none;
+$input-placeholder-color: $gray-300;
+
+//Button
+$btn-border-radius: 2px;
+$btn-border-radius-sm: 2px;
+$btn-font-weight: 300;

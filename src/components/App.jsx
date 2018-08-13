@@ -9,7 +9,7 @@ import Alert from "./common/Alert";
 import Button from "./common/Button";
 import Header from "./common/Header";
 import "./App.css";
-import AppContainer from "./common/Container";
+import AppContent from "./common/AppContent";
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +25,7 @@ class App extends Component {
     const taskExists = todos.some(todo => todo.task === task);
     if (taskExists) {
       this.setState({ error: "Task Exists" });
+      return false;
     } else {
       this.setState({
         todos: [
@@ -33,6 +34,7 @@ class App extends Component {
         ]
       });
     }
+    return true;
   };
 
   toggleCompletedTodo = id => {
@@ -66,10 +68,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app-container">
         <Header />
         <Alert message={this.state.error} />
-        <AppContainer>
+        <AppContent>
           <TodoList
             toggleCompletedTodo={this.toggleCompletedTodo}
             deleteTodo={this.handleDeleteTodo}
@@ -77,9 +79,13 @@ class App extends Component {
           />
           <TodoForm value={this.state.todo} submitTodo={this.addTodo} />
           {!!this.state.completed && (
-            <Button name="Clear Completed" onClick={this.clearCompletedTodos} />
+            <Button
+              name="Clear Completed"
+              className="btn-outline-primary btn-footer"
+              onClick={this.clearCompletedTodos}
+            />
           )}
-        </AppContainer>
+        </AppContent>
       </div>
     );
   }
